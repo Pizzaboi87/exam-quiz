@@ -1,0 +1,26 @@
+{
+  "question": [
+    {
+      "questionTitle": "Ma szombat van?",
+      "answers": [
+        "Nem, ma péntek van.",
+        "Igen, ma szombat van.",
+        "Nem, ma vasárnap van.",
+        "Nem, ma csütörtök van.",
+        "Nem, ma kedd van."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionTitle": "Holnap vasárnap lesz?",
+      "answers": [
+        "Nem, holnap péntek lesz.",
+        "Nem, holnap szombat lesz.",
+        "Igen, holnap vasárnap lesz.",
+        "Nem, holnap csütörtök lesz.",
+        "Nem, holnap kedd lesz."
+      ],
+      "correctAnswerIndex": 2
+    }
+  ]
+}
