@@ -1,5 +1,6 @@
 import Question from "./Question";
 import Timer from "./Timer";
+import Lifes from "./Lifes";
 import { Button } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/user-context";
@@ -7,14 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { useSwalMessage } from "../utils/useSwalMessage";
 import { storeResult } from "../utils/firebase";
 import { getData, getUserData, updateUserData } from "../utils/firebase";
-import Lifes from "./Lifes";
 
 const Quiz = ({ isRace }) => {
   const { points, resetPoints, currentUser, setUserData } =
     useContext(UserContext);
-  const { showMessage, showErrorSwal } = useSwalMessage();
-  const [lives, setLives] = useState(3);
-  const [timeOff, setTimeOff] = useState(false);
+  const { showScore, showErrorSwal } = useSwalMessage();
+  const [playerLifes, setPlayerLifes] = useState(3);
+  const [gameOver, setGameOver] = useState(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [actualUserData, setActualUserData] = useState([]);
   const [guess, setGuess] = useState(null);
@@ -64,7 +64,7 @@ const Quiz = ({ isRace }) => {
   };
 
   const finish = () => {
-    showMessage("Az elért pontszám: " + points).then(() => {
+    showScore(points).then(() => {
       if (!isRace) {
         uploadPoints();
       } else {
@@ -76,8 +76,12 @@ const Quiz = ({ isRace }) => {
   };
 
   useEffect(() => {
-    if (timeOff) finish();
-  }, [timeOff]);
+    if (playerLifes === 0) setGameOver(true);
+  }, [playerLifes]);
+
+  useEffect(() => {
+    if (gameOver) finish();
+  }, [gameOver]);
 
   useEffect(() => {
     fetchQuestions();
@@ -91,12 +95,16 @@ const Quiz = ({ isRace }) => {
       <h1 className="absolute top-4 left-4 text-[1.5rem] font-[600] text-white">
         Pontszám: {points}
       </h1>
-      {isRace ? <Lifes lives={lives} /> : <Timer setTimeOff={setTimeOff} />}
+      {isRace ? (
+        <Lifes playerLifes={playerLifes} />
+      ) : (
+        <Timer setGameOver={setGameOver} />
+      )}
       <Question
         question={questions[questionIndex]}
         guess={guess}
         setGuess={setGuess}
-        setLives={setLives}
+        setPlayerLifes={setPlayerLifes}
       />
       <span className="flex gap-4">
         <Button variant="quiz" onClick={() => navigate("/")}>

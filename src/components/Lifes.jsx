@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const Lifes = ({ lives }) => {
-  const filledHearts = new Array(lives)
+const Lifes = ({ playerLifes }) => {
+  const filledHearts = new Array(playerLifes)
     .fill(null)
     .map((_, index) => (
       <FavoriteIcon
@@ -13,7 +13,7 @@ const Lifes = ({ lives }) => {
       />
     ));
 
-  const emptyHearts = new Array(3 - lives)
+  const emptyHearts = new Array(3 - playerLifes)
     .fill(null)
     .map((_, index) => (
       <FavoriteBorderIcon

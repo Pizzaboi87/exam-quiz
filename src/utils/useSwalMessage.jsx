@@ -26,17 +26,31 @@ export const useSwalMessage = () => {
     });
   }, []);
 
-  const showMessage = useCallback((message) => {
+  const showScore = useCallback((score) => {
     return new Promise((resolve) => {
       Swal.fire({
-        icon: "info",
-        title: "Üzenet",
-        text: message,
+        title: "Quiz vége",
+        text: `Az elért pontszám: ${score}`,
       }).then(() => {
         resolve();
       });
     });
   }, []);
 
-  return { showErrorSwal, showSuccessSwal, showMessage };
+  const showImage = (image) => {
+    return new Promise((resolve) => {
+      Swal.fire({
+        imageUrl: image,
+        imageAlt: "image",
+        showConfirmButton: false,
+        showCloseButton: false,
+        background: "#fff",
+        padding: "1rem",
+      }).then(() => {
+        resolve();
+      });
+    });
+  };
+
+  return { showErrorSwal, showSuccessSwal, showScore, showImage };
 };

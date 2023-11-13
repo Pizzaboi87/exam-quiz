@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Box, Typography } from "@mui/material";
 
-const Timer = ({ setTimeOff }) => {
+const Timer = ({ setGameOver }) => {
   const initialTime = 15 * 60;
   const [timeLeft, setTimeLeft] = useState(initialTime);
   const [displayTime, setDisplayTime] = useState("15:00");
@@ -20,7 +20,7 @@ const Timer = ({ setTimeOff }) => {
           return prevTime - 1;
         } else {
           clearInterval(timer);
-          setTimeOff(true);
+          setGameOver(true);
         }
       });
     }, 1000);
@@ -31,7 +31,7 @@ const Timer = ({ setTimeOff }) => {
   const progressValue = (timeLeft / initialTime) * 100;
 
   return (
-    <div className="flex items-center justify-center relative mb-4">
+    <div className="flex items-center justify-center relative mb-4 mt-16">
       <CircularProgress
         variant="determinate"
         value={progressValue}

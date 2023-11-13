@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getDatabase, onValue, ref, set } from "firebase/database";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { getStorage, ref as refStr, getDownloadURL } from "firebase/storage";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -25,6 +26,7 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const db = getFirestore();
 export const database = getDatabase();
+export const storage = getStorage();
 
 export const createUserDocumentFromAuth = async (userAuth, displayName) => {
   if (!userAuth || !displayName) return;
@@ -134,5 +136,19 @@ export const storeResult = async (currentUser, result) => {
       console.error("An error occurred while storing result.", error);
       return false;
     }
+  }
+};
+
+export const getQuestionImage = async (image) => {
+  const imageRef = refStr(storage, `questions/${image}`);
+
+  try {
+    const downloadURL = await getDownloadURL(imageRef);
+    return downloadURL;
+  } catch (error) {
+    console.error("An error occurred while downloading photo URL.", error);
+    const downloadURL =
+      "https://firebasestorage.googleapis.com/v0/b/exam-quiz-5f59a.appspot.com/o/questions%2Flost.gif?alt=media&token=1d9a7923-736f-4687-9507-e4683cf7bbf8";
+    return downloadURL;
   }
 };

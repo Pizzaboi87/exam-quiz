@@ -1,26 +1,1381 @@
 {
+  "championship": {
+    "Dömdödöm Pufi": {
+      "name": "Dömdödöm Pufi",
+      "result": 0.5
+    },
+    "Ejmő": {
+      "name": "Ejmő",
+      "result": 0
+    },
+    "Kisvangács": {
+      "name": "Kisvangács",
+      "result": -1
+    },
+    "Nyunyez": {
+      "name": "Nyunyez",
+      "result": 2
+    },
+    "Pepe": {
+      "name": "Pepe",
+      "result": 1
+    },
+    "Pizzaboi": {
+      "name": "Pizzaboi",
+      "result": 1
+    },
+    "Putty": {
+      "name": "Putty",
+      "result": -1
+    }
+  },
   "question": [
     {
-      "questionTitle": "Ma szombat van?",
+      "questionID": "question001",
+      "questionTitle": "Az alábbiak közül melyik történik a fenntartás nevű programozási fázisban?",
       "answers": [
-        "Nem, ma péntek van.",
-        "Igen, ma szombat van.",
-        "Nem, ma vasárnap van.",
-        "Nem, ma csütörtök van.",
-        "Nem, ma kedd van."
+        "A fejlesztő kijavítja az éles használat közben felmerült hibákat.",
+        "A fejlesztő meghatározza, hogy a bemenő adatokból milyen műveletek végrehajtásával kaphatjuk meg a kimenő adatokat.",
+        "A fejlesztő megbizonyosodik arról, hogy a program az elvárásoknak megfelelően működik.",
+        "A fejlesztő egy adott programozási nyelven leírja, hogy milyen műveleteket milyen sorrendben kell végrehajtani.",
+        "A fejlesztő meghatározza a probléma be- és kimenő adatait, a közöttük lévő összefüggéseket."
       ],
-      "correctAnswerIndex": 1
+      "correctAnswerIndex": 0,
+      "imageID": ""
     },
     {
-      "questionTitle": "Holnap vasárnap lesz?",
+      "questionID": "question002",
+      "questionTitle": "Algoritmustervezés során valószínűleg melyik vezérlési szerkezetet használtuk, ha az implementációja a következő?",
       "answers": [
-        "Nem, holnap péntek lesz.",
-        "Nem, holnap szombat lesz.",
-        "Igen, holnap vasárnap lesz.",
-        "Nem, holnap csütörtök lesz.",
-        "Nem, holnap kedd lesz."
+        "Diszkrét ismétléses vezérlés.",
+        "Kezdőfeltételes ismétléses vezérlés.",
+        "Csökkenő számlálásos ismétléses vezérlés.",
+        "Hurok ismétléses vezérlés.",
+        "Növekvő számlálásos ismétléses vezérlés."
       ],
-      "correctAnswerIndex": 2
+      "correctAnswerIndex": 3,
+      "imageID": "image001"
+    },
+    {
+      "questionID": "question003",
+      "questionTitle": "Mekkora helyet foglal egy E típusú változóra mutató pointer változó 32 bites rendszerekben?",
+      "answers": [
+        "4 bájtot.",
+        "32 bájtot.",
+        "8 bájtot.",
+        "Amennyi egy E típusú érték tárolásához szükséges.",
+        "Amennyi egy E típusú érték tárolásához szükséges, de legalább 4 bájtot."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question004",
+      "questionTitle": "Melyik kulcsszóval kell deklarálnunk egy változót, hogy fordítási hibát okozzon, ha értéket akarunk neki adni?",
+      "answers": ["volatile", "static", "auto", "extern", "register", "const"],
+      "correctAnswerIndex": 5,
+      "imageID": ""
+    },
+    {
+      "questionID": "question005",
+      "questionTitle": "Mire jó a continue utasítás?",
+      "answers": [
+        "Segítségével jelezhetjük, hogy a függvény végrehajtása befejeződött.",
+        "A break utasítás hatására a program az őt követő continue utasításnál folytatódik.",
+        "A switch-ben jelzi, hogy ha a szelektor kifejezés aktuális értéke nincs megadva, akkor hol folytatódjon a switch végrehajtása.",
+        "Hatására a while ciklus azonnal a feltételkiértékelés végrehajtásával folytatódik.",
+        "A switch-ben jelzi, hogy a vezérlés folytatódjon a következő case ágon is, de nem szokás kiírni."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question006",
+      "questionTitle": "Melyik utasításnak NEM lesz érdemi hatása int A[5][12] deklaráció esetén?",
+      "answers": [
+        "A[0][25] = A[2][1]",
+        "A[0][42] = A[4][2]",
+        "A[0][5] = A[1][5]",
+        "A[0][13] = A[2][3]",
+        "A[0][2] = A[2][0]"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question007",
+      "questionTitle": "Mi a szemantika?",
+      "answers": [
+        "Egy algoritmusnak egy adott programozási nyelven történő leírása.",
+        "Szabályok összessége, mely leírja, hogy egy adott nyelvben mik az érvényes jelsorozatok.",
+        "Ez adja meg, hogy az adott nyelven értelmes jelsorozatoknak mi a jelentése.",
+        "Adott típusú összes feladat megoldására vonatkozó pontos előírás.",
+        "Az az egység, amelyet az értékkészlet és a műveletek határoznak meg."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question008",
+      "questionTitle": "A szinusz értékének sorfejtés segítségével történő közelítő számítása során hogyan használjuk ki a szinusz függvény periodikusságát?",
+      "answers": [
+        "Arra, hogy a sorfejtés során a következő tagot az előzőből számolhassuk.",
+        "Nem használjuk ki közvetlenül, már a sorfejtésben ki van használva.",
+        "Az algoritmusban e miatt tudunk ciklusokat (ismétléses vezérlést) használni.",
+        "A bemeneti értéket -π és π közé transzformálva az eredményt bármilyen értékre pontosan tudjuk kiszámolni.",
+        "A számítás befejezésének a feltétele egyszerűsödik ha kihasználjuk ezt a tulajdonságot."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question009",
+      "questionTitle": "Melyik karaktersorozat NEM felel meg az ábrán látható szintaxisnak?",
+      "answers": ["_5X", "KW0_Q3", "A38", "FOO", "___"],
+      "correctAnswerIndex": 2,
+      "imageID": "image002"
+    },
+    {
+      "questionID": "question010",
+      "questionTitle": "Ha egy fájl már pufferben lévő tartalmát ténylegesen a háttértárra szeretnénk írni, ezt megtehetjük-e?",
+      "answers": [
+        "Igen, a fájl lezárása és újranyitása nélkül is az fflush függvény segítségével.",
+        "Nem, erre a fájl lezárásával és újranyitásával sincs lehetőségünk.",
+        "Igen, a fájl lezárása és újranyitása nélkül is az ftell függvény segítségével.",
+        "Igen, a fájl lezárása és újranyitása nélkül is az fseek függvény segítségével.",
+        "Igen, de csak a fájl lezárásával és újbóli megnyitásával."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question011",
+      "questionTitle": "Összesen mekkora helyet foglalnak a main függvény második paramétereként kapott pointerén keresztül elérhető adatok (magát a pointert nem beleszámolva) egy 64 bites rendszeren, ha a programot a ./program alfa beta paraméterezéssel indítjuk?",
+      "answers": [
+        "44 bájtot.",
+        "36 bájtot.",
+        "32 bájtot.",
+        "20 bájtot.",
+        "52 bájtot."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question012",
+      "questionTitle": "Melyik állítás NEM igaz a következő calc.c programmal kapcsolatban?",
+      "answers": [
+        "Mind igaz.",
+        "Az extern kulcsszó elhagyása érdemi változást jelent a program tekintetében.",
+        "A gcc calc.c parancs linker hibával áll le, és nem készíti el a futtatható programot.",
+        "A program ugyanazt írja ki, amit beolvasott.",
+        "A gcc -c calc.c parancs lefut, és előállít egy object fájlt."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": "image003"
+    },
+    {
+      "questionID": "question013",
+      "questionTitle": "Melyik válasz írja le legpontosabban egy programban található #include és #define utasítások helyzetét?",
+      "answers": [
+        "Nincs rá általános szabály.",
+        "Az #include-ok és #define-ok keveredhetnek, de a C kódot meg kell előzniük.",
+        "Egy adott forrásban nem szerepelhet együtt a #include és #define.",
+        "Az #include-oknak meg kell előzniük minden más kódot.",
+        "A #define-oknak meg kell előzniük minden más kódot."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question014",
+      "questionTitle": "Miért, vagy miért nem célszerű egy futás közben változó, kezdőértékkel ellátott sztringet tömbként deklarálni?",
+      "answers": [
+        "Azért célszerű, mert a pointeres deklarációval ellentétben így nem kell expliciten megadnunk, hogy mekkora helyet foglaljon a fordító, hanem magától kiszámolja azt.",
+        "Azért célszerű, mert pointerként deklarálva a változót a lezáró karakterről nekünk kellene gondoskodni.",
+        "Azért célszerű, mert a pointeres deklaráció a tömb és a pointer általános felcserélhetősége ellenére is futási hibát okozhat a sztring értékének változtatásakor.",
+        "Máshogy nem is lehetséges, mert pointerként deklarálva egyáltalán nem is adhatunk kezdőértéket a sztringnek.",
+        "Azért nem, mert pointerként deklarálva mégiscsak nekünk kellene gondoskodni a memóriafoglaláskor, hiába adnánk meg kezdőértéket."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question015",
+      "questionTitle": "A fordítási folyamat melyik lépése állítja elő a futtatható állományt az object fájlokból?",
+      "answers": [
+        "Az archiver.",
+        "A preprocesszor.",
+        "A compiler.",
+        "A linker.",
+        "Az assembler."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question016",
+      "questionTitle": "A fordítási folyamat melyik lépése képes optimalizálások segítségével gyorsabbá tenni a programot?",
+      "answers": [
+        "A linker.",
+        "A compiler.",
+        "A preprocesszor.",
+        "Az assembler.",
+        "Az archiver."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question017",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "for(X) { Y; }",
+        "switch(X) { default: Y; }",
+        "do Y; while(X);",
+        "{ !X; Y; }",
+        "if(!X) { Y; }",
+        "while(X) { Y; }"
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": "image004"
+    },
+    {
+      "questionID": "question018",
+      "questionTitle": "Mekkora lehet egy sztring minimális mérete C-ben?",
+      "answers": [
+        "Eggyel kevesebb, mint a sztring aktuális hossza.",
+        "2⁸ azaz 256",
+        "0",
+        "1",
+        "Nincs elvi korlátja, csak az elérhető memóriától függ."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question019",
+      "questionTitle": "Melyik kulcsszóval kell deklarálnunk egy változót, hogy csak addig létezzen, amíg a program végrehajtása olyan blokkban jár, amelyben látható?",
+      "answers": ["extern", "static", "auto", "const", "register", "volatile"],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question020",
+      "questionTitle": "Mire jó a break utasítás?",
+      "answers": [
+        "Ugyanarra használjuk a switch-ben, mint amire a continue utasítást a ciklusokban.",
+        "A break utasítás hatására a program az őt követő continue utasításnál folytatódik.",
+        "Hatására a while ciklus azonnal a feltételkiértékelés végrehajtásával folytatódik.",
+        "Segítségével jelezhetjük, hogy a függvény végrehajtása befejeződött.",
+        "Hatására a for ciklus azonnal befejeződik."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question021",
+      "questionTitle": "Ha az A±B×C±D == A±((B×C)±D) egyenlőség mindig igaz, akkor biztos, hogy...",
+      "answers": [
+        "× alacsonyabb prioritású, mint ±",
+        "× és ± azonos prioritású és jobbról-balra asszociatív.",
+        "± balról-jobbra asszociatív.",
+        "× magasabb prioritású, mint ±",
+        "× balról-jobbra asszociatív."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question022",
+      "questionTitle": "Mi egy programozási nyelv értékkészlettel és műveletekkel megadott egysége?",
+      "answers": [
+        "Adattípus.",
+        "Szintaxis.",
+        "Algoritmus.",
+        "Program.",
+        "Szerkezeti ábra."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question023",
+      "questionTitle": "Egy értesítési lánc (riadólánc) ellenőrzése során hogyan célszerű eltárolni magát a láncot?",
+      "answers": [
+        "Egy egész típusú változóban. Minden résztvevő kapjon egy számot (0-tól kezdve). A változó mindig a következő értesítendő személy sorszámát tárolja.",
+        "Nem kell tárolni, az értesítési számpárok (ki kit értesít) ugyanis folyamatában feldolgozhatóak.",
+        "Egy halmazban. Minden résztvevő kap egy sorszámot, és ha értesítve lett, kivesszük a halmazból, amely kezdetben minden elemet tartalmaz.",
+        "Egy tömbben. Minden résztvevő kapjon egy számot (0-tól kezdve), és az i. indexű tömbelem az i. sorszámú résztvevő által értesítendő személy sorszáma.",
+        "Egy kétdimenziós tömbben. Minden résztvevő kapjon egy számot (0-tól kezdve). A tömb [0][i] indexű eleme egy j. sorszámot tartalmaz, az [1][i] indexű eleme pedig a j. résztvevő által értesítendő személy sorszáma."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question024",
+      "questionTitle": "Melyik karaktersorozat NEM felel meg az ábrán látható szintaxisnak?",
+      "answers": ["_5", "Foo", "A38", "_", "KW_Q3"],
+      "correctAnswerIndex": 1,
+      "imageID": "image005"
+    },
+    {
+      "questionID": "question025",
+      "questionTitle": "A programunk szöveget olvas egy fájlból. Ha az alábbi függvények közül csak az egyik, akkor melyik szerepel benne az fopen és fclose hívása között?",
+      "answers": ["fprintf", "fgets", "fflush", "scanf", "fread"],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question026",
+      "questionTitle": "Melyik válasz tartalmazza helyes sorrendben egy függvény végrehajtásának a felsorolt lépéseit?",
+      "answers": [
+        "Paramétermásolás, helyfoglalás, visszatérési érték másolása, memóriafelszabadítás.",
+        "Paramétermásolás, memóriafelszabadítás, helyfoglalás, visszatérési érték másolása.",
+        "Helyfoglalás, paramétermásolás, memóriafelszabadítás, visszatérési érték másolása.",
+        "Helyfoglalás, paramétermásolás, visszatérési érték másolása, memóriafelszabadítás.",
+        "Paramétermásolás, helyfoglalás, memória felszabadítás, visszatérési érték másolása."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question027",
+      "questionTitle": "Melyik állítás NEM igaz a következő calc.c programmal kapcsolatban?",
+      "answers": [
+        "A num változónak nem foglalódik hely a memóriában.",
+        "Az extern kulcsszó elhagyása érdemi változást jelent a program tekintetében.",
+        "A gcc calc.c parancs lefut, és elkészíti a futtatható programot.",
+        "Mind igaz.",
+        "A program feladata számrendszerek közötti átváltás."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": "image006"
+    },
+    {
+      "questionID": "question028",
+      "questionTitle": "Mit számol ki #define m(A) (A * A) definíció esetén a 2*m(x+y) kifejezés?",
+      "answers": [
+        "Az x és y befogókkal rendelkező derékszögű háromszög átfogója negyzetének kétszeresét.",
+        "A 2x+y+xy kifejezés értékét.",
+        "Az x+y oldalhosszúságú négyzet területének kétszeresét.",
+        "Az x×y×1 méretű téglatest felszínét.",
+        "Semmit, érvénytelen kifejezés lesz."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question029",
+      "questionTitle": "Miért, vagy miért nem célszerű egy futás közben változó, kezdőértékkel ellátott sztringet pointerként deklarálni?",
+      "answers": [
+        "Azért célszerű, mert tömbként deklarálva a változót sztringként nem, csak tömbként tudnánk inicializálni, így a lezáró karakterről is nekünk kellene gondoskoni.",
+        "Azért nem, mert így mégicsak nekünk kell gondoskodni a memóriafoglalásról, hiába adtunk kezdőértéket.",
+        "Azért célszerű, mert a tömbös deklarációval ellentétben így nem kell expliciten megadnunk, hogy mekkora helyet foglaljon a fordító, hanem magától kiszámolja azt.",
+        "Azért célszerű, mert előre nem ismert hosszúságú új érték esetén csak így tudjuk azt rövidítés nélkül biztosan eltárolni ezen változó segítségével.",
+        "Máshogy nem is lehetséges, mert tömbként deklarálva egyáltalán nem is adhatunk kezdőértéket a sztringnek."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question030",
+      "questionTitle": "Mi a gcc -02 optimalizálási lépésének feladata?",
+      "answers": [
+        "A forráskódban található felesleges utasítások kidobásával csökkenti a program futásidejét.",
+        "Átalakításokkal gyorsabbá és/vagy kisebbé tenni a lefordított programot.",
+        "A forráskódban található felesleges sorok kidobásával csökkenteni a forráskód méretét.",
+        "Kijavítani a programozó által vétett apróbb szemantikai hibákat.",
+        "A fordítás során kiszámolható (konstans) kifejezések értékét még fordítási időben kiszámolni, hogy ne a futás töltsön ezekkel időt."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question031",
+      "questionTitle": "Az alábbiak közül melyik történik az ellenőrzés nevű programozási fázisban?",
+      "answers": [
+        "A fejlesztő meghatározza, hogy a bemenő adatokból milyen műveletek végrehajtásával kaphatjuk meg a kimenő adatokat.",
+        "A fejlesztő megbizonyosodik arról, hogy a program az elvárásoknak megfelelően működik.",
+        "A fejlesztő meghatározza a probléma be- és kimenő adatait, a közöttük lévő összefüggéseket.",
+        "A fejlesztő kijavítja az éles használat közben felmerült hibákat.",
+        "A fejlesztő egy adott programozási nyelven leírja, hogy milyen műveleteket milyen sorrendben kell végrehajtani."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question032",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "for(Y = i; Y <= n; ++Y) { X; }",
+        "for(Y = n; Y >= i; --Y) { X; }",
+        "for(X = i; X <= n; ++X) { Y; }",
+        "for(X = n; X >= i; --X) { Y; }",
+        "for(i = Y; i <= n; i++) { X; }",
+        "for(i = X; i >= n; --i) { Y; }"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": "image007"
+    },
+    {
+      "questionID": "question033",
+      "questionTitle": "A felsoroltak közül melyik adattípusra NEM igaz, hogy két határérték között a neki megfelelő matematikai adattípus összes értékének ábrázolására képes?",
+      "answers": [
+        "A felsoroltak mindegyikére igaz.",
+        "A felsoroltak egyikére sem igaz.",
+        "long int",
+        "double",
+        "unsigned char"
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question034",
+      "questionTitle": "Mi a volatile kulcsszó jelentése?",
+      "answers": [
+        "Az így deklarált változó létezik, használható, de memóriát valaki más fog foglalni a számára.",
+        "Az így deklarált változónak nem adhatunk értéket, mert az fordítási hibát okozna.",
+        "Az így deklarált változó a program teljes végrehajtása során létezni fog.",
+        "Az így deklarált változó értéke a programunk beavatkozása nélkül is megváltozhat.",
+        "Az így deklarált változó a program futása alatt csak addig létezik, ameddig látható.",
+        "Az így deklarált változó létezni fog, de nem lesz memóriacíme."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question035",
+      "questionTitle": "Mire jó a continue utasítás?",
+      "answers": [
+        "A switch-ben jelzi, hogy a vezérlés folytatódjon a következő case ágon is, de nem szokás kiírni.",
+        "Ugyanarra használjuk a ciklusokban, mint amire a break utasítást a switch-ben.",
+        "Segítségével jelezhetjük, hogy a függvény végrehajtása befejeződött, folytatható a program.",
+        "Hatására a for ciklus azonnal a feltételkiértékelés végrehajtásával folytatódik.",
+        "A teljes ciklus megszakítása nélkül lehet vele kihagyni a ciklusmag maradék részét."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question036",
+      "questionTitle": "Mi lesz C nyelven az a += ((b = 0) ? c : d); utasítás egyik következménye?",
+      "answers": [
+        "Ha b értéke 0 volt, akkor a értéke c-vel, különben d-vel nő.",
+        "Fordítási hiba.",
+        "b új értéke 0 lesz.",
+        "a értéke c-vel nő.",
+        "a értéke d lesz."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question037",
+      "questionTitle": "Mi a szemantika?",
+      "answers": [
+        "Egy adattípus műveleteinek leírása.",
+        "Az adott nyelvben érvényes jelsorozatokat definiáló szabályhalmaz.",
+        "Az adott nyelven szabályos jelsorozatok értelmezését adja meg.",
+        "Adott típusú összes feladat megoldására vonatkozó pontos előírás.",
+        "Egy program tervezésének első lépése."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question038",
+      "questionTitle": "Leginkább melyik probléma specifikációjának részlete lehet a következő: \"Az input három valós szám: A, B és C\"",
+      "answers": [
+        "Számsorozat legnagyobb közös osztójának meghatározása.",
+        "Másodfokú egyenlet gyökeinek kiszámítása.",
+        "Adott érték alatti prímszámok meghatározása.",
+        "Függvény határozott integráljának kiszámítása.",
+        "Hanoi tornyai probléma megoldása."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question039",
+      "questionTitle": "Melyik karaktersorozat NEM felel meg az ábrán látható szintaxisnak?",
+      "answers": ["kW0_Qc3", "_", "_5let", "foo", "A38"],
+      "correctAnswerIndex": 0,
+      "imageID": "image008"
+    },
+    {
+      "questionID": "question040",
+      "questionTitle": "A programunk szöveget olvas egy fájlból. Ha az alábbi függvények közül csak az egyik, akkor melyik szerepel benne az fopen és fclose hívása között?",
+      "answers": ["fflush", "fread", "fprintf", "gets", "fscanf"],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question041",
+      "questionTitle": "Összesen mekkora helyet foglalnak a main függvény második paramétereként kapott pointerén keresztül elérhető adatok (magát a pointert nem beleszámolva) egy 64 bites rendszeren, ha a programot a ./program alfa beta gamma paraméterezéssel indítjuk?",
+      "answers": [
+        "66 bájtot.",
+        "52 bájtot.",
+        "58 bájtot.",
+        "72 bájtot.",
+        "46 bájtot."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question042",
+      "questionTitle": "Melyik állítás NEM igaz a következő calc.c programmal kapcsolatban?",
+      "answers": [
+        "A gcc -c calc.c parancs linker hibával áll le, és nem készíti el a futtatható programot.",
+        "A num változónak nem foglalódik hely a memóriában.",
+        "A program feladata számrendszerek közötti átváltás.",
+        "A gcc -c calc.c parancs lefut, és előállít egy object fájlt.",
+        "Az extern kulcsszó elhagyásának nincs jelentősége."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": "image009"
+    },
+    {
+      "questionID": "question043",
+      "questionTitle": "Egy programban hol használhatunk #define direktívát?",
+      "answers": [
+        "Csak komment sorok előzhetik meg.",
+        "Mindenképpen az #include-ok előtt kell szerepelniük.",
+        "Bárhol.",
+        "Csak a preprocesszornak szóló utasítások előzhetik meg, érdemi C kód nem.",
+        "Mindenképpen az #include-ok mögött kell szerepelniük."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question044",
+      "questionTitle": "Van-e különbség egy kezdőértékkel ellátott sztring tömbként és pointerként deklarált változata között, ha a sztring értékét a program futása során nem írjuk át?",
+      "answers": [
+        "Tömbként deklarálva csak tömbként tudnánk inicializálni, így a sztringlezáró karakterről is nekünk kellene gondoskodni.",
+        "Nincs, teljes mértékben azonos módon lesznek tárolva.",
+        "Pointerként deklarálva nem kell expliciten megadnunk, hogy mekkora helyet foglaljon a fordító, tömb esetén igen.",
+        "Pointerként deklarálva nekünk kell futás közben memóriát foglalni, így nem is adhatunk kezdőértéket a sztringnek.",
+        "A pointeres változathoz kicsivel több memória kell, de egyébként ugyanúgy használhatóak."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question045",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "{ X; Y; }",
+        "switch(X) { case i: Y; break; case n: break; }",
+        "do Y; while(X);",
+        "while(X) { Y; }",
+        "if(X) { Y; }",
+        "for(i; X; n) { Y; }"
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": "image010"
+    },
+    {
+      "questionID": "question046",
+      "questionTitle": "Hogyan lehet C-ben valódi konstanst készíteni, ami teljes mértékben ugyanúgy viselkedik, mintha a konstans helyébe az értékét írtuk volna, és nem a változók között tárolódik?",
+      "answers": [
+        "A (0×) prefixszel kell kiegészíteni.",
+        "A #define kulcsszóval.",
+        "A const kulcsszóval.",
+        "Idézőjelek (\") között.",
+        "Nem lehet, minden érték a változók között fog tárolódni."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question047",
+      "questionTitle": "Ha egy (nem standard) fájl már beolvasott (de el nem tárolt) részét újra fel szeretnénk dolgozni, ezt megtehetjük-e?",
+      "answers": [
+        "Nem, erre a fájl lezárásával és újranyitásával sincs lehetőségünk.",
+        "Igen, a fájl lezárása és újranyitása nélkül is az ftell függvény segítségével.",
+        "Igen, a fájl lezárása és újranyitása nélkül is az fseek függvény segítségével.",
+        "Igen, a fájl lezárása és újranyitása nélkül is az fflush függvény segítségével.",
+        "Igen, de csak a fájl lezárásával és újbóli megnyitásával."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question048",
+      "questionTitle": "Egy halmaz adattípus megvalósítható-e egyetlen egész típusú változó segítségével?",
+      "answers": [
+        "Igen, feltéve, hogy a halmaz univerzumának elemszáma nem több, mint a megvalósításra használt változó bitjeinek száma.",
+        "Igen, feltéve, hogy a halmaz univerzumának elemszáma nem több, mint a megvalósításra használt változó bájtjainak száma.",
+        "Igen, feltéve, hogy a halmaz univerzumának elemei egyetlen biten ábrázolhatóak.",
+        "Igen, feltéve, hogy a halmaz univerzumának elemei egyetlen bájton ábrázolhatóak.",
+        "Nem."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": "Mi az értékkészlete a typedef struct { T A; X B[5]; };-ként definiált típusnak?"
+    },
+    {
+      "questionID": "question049",
+      "questionTitle": "",
+      "answers": [
+        "{1, 2, 3, 4, 5}×T",
+        "{0, 1, 2, 3, 4}×T",
+        "T×T×T×T×T",
+        "T×X⁵",
+        "T"
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question050",
+      "questionTitle": "A program különböző pontjain milyen változóhivatkozás fog biztosan ugyanarra a változóra hivatkozni a program teljes végrehajtása során?",
+      "answers": [
+        "*p, ha p egy pointer.",
+        "Nem lehet ilyen hivatkozást készíteni.",
+        "g, ha g egy globális változó.",
+        "t[i], ha t egy tömb és i egy egész változó.",
+        "l, ha l egy lokális változó."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question051",
+      "questionTitle": "A programozás melyik fázisa az, amelyben a fejlesztő egy adott programozási nyelven leírja, hogy milyen műveleteket milyen sorrendben kell végrehajtani?",
+      "answers": [
+        "Követelmény-specifikáció",
+        "Fenntartás",
+        "Ellenőrzés",
+        "Algoritmustervezés",
+        "Megvalósítás"
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question052",
+      "questionTitle": "Melyik kifejezés érvénytelen az int **p; deklaráció esetén?",
+      "answers": ["*p-*p", "p+2", "**p+2", "**p***p", "*p+*p"],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question053",
+      "questionTitle": "Hány bájtot foglal a struct { int a:12; int b:9; int c:5; } típus, ha sizeof(int) értéke 4?",
+      "answers": ["26", "12", "3", "8", "4"],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question054",
+      "questionTitle": "Az alábbiak közül melyik az a legszűkebb vezérlési szerkezet halmaz, amelynek segítségével minden egyetlen eljárásban megvalósítandó algoritmus vezérlési szerkezete felírható?",
+      "answers": [
+        "Szekvenciális, egyszerű szelekciós, számlálásos ismétléses és hurok ismétléses vezérlések.",
+        "Egyszerű szelekciós, esetkiválasztásos szelekciós és kezdőfeltételes ismétléses vezérlések.",
+        "Szekvenciális, egyszerű szelekciós és kezdőfeltételes ismétléses vezérlések.",
+        "Szekvenciális, esetkiválasztásos szelekciós és diszkrét ismétléses vezérlések.",
+        "Szekvenciális, többszörös szelekciós, kezdőfeltételes ismétléses és diszkrét ismétléses vezérlések."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question055",
+      "questionTitle": "Összesen mekkora helyet foglalnak a main függvény második paramétereként kapott pointerén keresztül elérhető adatok (magát a pointert nem beleszámolva) egy 32 bites rendszeren, ha a programot a ./program alfa beta paraméterezéssel indítjuk?",
+      "answers": [
+        "32 bájtot.",
+        "52 bájtot.",
+        "20 bájtot.",
+        "36 bájtot.",
+        "44 bájtot."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question056",
+      "questionTitle": "Mi az, amit egy header fájl LEGKEVÉSBÉ valószínű, hogy tartalmaz?",
+      "answers": [
+        "Függvény definíciók.",
+        "Újabb header include-ok.",
+        "Változó deklarációk.",
+        "Feltételes fordítási direktívák.",
+        "Konstans definíciók."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question057",
+      "questionTitle": "Mi az adattípus?",
+      "answers": [
+        "Az az előírás, amely megadja, hogy milyen műveleteket milyen sorrendben kell végrehajtani.",
+        "C nyelven a typedef kulcsszóval deklarált azonosító.",
+        "Az az előírás, ami megadja, hogy az eltárolt bitsorozatot hogyan kell értelmezni.",
+        "Az a szabály, ami megadja, hogy egy programnyelven mit lehet leírni, és mit nem.",
+        "Az az egység, amelyet az értékkészlet és a műveletek határoznak meg."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question058",
+      "questionTitle": "Leginkább melyik probléma specifikációjának részlete lehet a következő: \"Az input tetszőleges számú pozitív egész érték, valamint 0 lehet, ez utóbbit speciálisan kezeljük.\"",
+      "answers": [
+        "Számsorozat legnagyobb közös osztójának meghatározása.",
+        "Függvény határozott integráljának kiszámítása.",
+        "Adott érték alatti prímszámok meghatározása.",
+        "Hanoi tornyai probléma megoldása.",
+        "Másodfokú egyenlet gyökeinek kiszámítása."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question059",
+      "questionTitle": "Milyen jellegű utasítást kellett a programban korábban végrehajtani ahhoz, hogy a free (x) utasítás ne okozzon futási hibát?",
+      "answers": [
+        "x = &y; ahol y egy lokális változó.",
+        "x = malloc(12);",
+        "x = &y; ahol y egy globális változó.",
+        "*x = 12;",
+        "A felsoroltak közül ezt egyik sem biztosíthatja."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question060",
+      "questionTitle": "Mekkora helyet foglal egy union típusú változó 64 bites rendszerekben (nem számolva az esetleges igazítással)?",
+      "answers": [
+        "Amennyit a legkisebb méretű mezője.",
+        "8 bájtot.",
+        "Annyiszor 8 bájtot, ahány mezője van.",
+        "Amennyi a deklarált mezőinek összmérete.",
+        "Amennyi a legnagyobb méretű mezője."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question061",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "while(Y) { X; }",
+        "while(X) { Y; }",
+        "while(!Y) { X; }",
+        "while(!X) { Y; }",
+        "while(X) { !Y; }",
+        "while(Y) { !X; }"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": "image011"
+    },
+    {
+      "questionID": "question062",
+      "questionTitle": "Az alábbiak közül melyik a preprocessor feladata?",
+      "answers": [
+        "Egyetlen forrásfájlból gépi kódú állományt gyártani.",
+        "A gyorsabb futás érdekében átalakítani a programot.",
+        "A forrásból törölni az összes kommentet.",
+        "Object fájlokból előállítani a futtatható programot.",
+        "Object fájlokat egyetlen, nem futtatható állományba gyűjteni."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question063",
+      "questionTitle": "Melyik karaktersorozat NEM felel meg az ábrán látható szintaxisnak?",
+      "answers": ["KW0_Q3", "A38", "_5X", "foo", "___"],
+      "correctAnswerIndex": 3,
+      "imageID": "image012"
+    },
+    {
+      "questionID": "question064",
+      "questionTitle": "Mit ad meg egy nyelv szintaxisa?",
+      "answers": [
+        "Azt, hogy mi a nyelv foglalt azonosítóinak jelentése.",
+        "Azt, hogy mik a nyelvben érvényes jelsorozatok.",
+        "Azt, hogy a nyelvben hogyan kell egy értéket kiíratni illetve beolvastatni.",
+        "Azt, hogy milyen előre megírt függvényeket használhatunk.",
+        "Azt, hogy a szövegszerkesztőben milyen színnel jelenjenek meg az egyes elemek."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question065",
+      "questionTitle": "Melyik kulcsszóval kell deklarálnunk egy változót, hogy akkor se vesszen el az értéke, ha a futás során kilépünk az őt deklaráló blokkból?",
+      "answers": ["volatile", "auto", "extern", "const", "static", "register"],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question066",
+      "questionTitle": "A forráskódba szúrt megjegyzéseket a fordítási folyamat melyik lépése kezeli?",
+      "answers": [
+        "Az assembler.",
+        "A linker.",
+        "Az archiver.",
+        "A compiler.",
+        "A preprocesszor."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question067",
+      "questionTitle": "A felsoroltak közül melyik adattípus alkalmas arra, hogy benne azonos típusú értékeket tároljunk úgy, hogy bármelyikhez bármikor egy index segítségével hozzáférjünk?",
+      "answers": [
+        "felsorolás",
+        "tömb",
+        "halmaz",
+        "szorzat-rekord",
+        "egyesített-rekord"
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question068",
+      "questionTitle": "A tanult definíció értelmében algoritmus-e a következő előírás, ha a probléma egy 3x4 méteres téglalap alakú vaskeret kereszttartó-hosszának kiszámítása: kérjünk be két valós értéket, emeljük őket négyzetre, és az összegükből vonjunk négyzetgyököt? Ha nem az, akkor az algoritmus melyik tulajdonságát nem teljesíti?",
+      "answers": [
+        "Nem, mert nem megvalósítható.",
+        "Nem, mert nem véges.",
+        "Nem, mert nem széleskörű.",
+        "Igen, algoritmus.",
+        "Nem, mert nem determinisztikus."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question069",
+      "questionTitle": "Van-e különbség a pointerként és a tömbként deklarált sztring között?",
+      "answers": [
+        "A felsorolt többi állítás közül egyik sem igaz.",
+        "Tömb deklaráció esetén csak tömbként inicializálható, sztringként nem.",
+        "Tömbként deklarálva mindenképpen mi adjuk meg a sztring méretét, pointer esetében ezt a fordító automatikusan határozza meg.",
+        "Ha az strcpy() függvény segítségével értéket adnánk a sztringnek, pointer esetében előbb magának a pointernek kell értéket adnunk.",
+        "Pointer esetén csak a teljes sztringgel dolgozhatunk, az egyes karaktereivel külön-külön nem."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question070",
+      "questionTitle": "Melyik algoritmus lesz hatékony az N-nél kisebb prímszámok meghatározására?",
+      "answers": [
+        "Minden p∈{2,...,N-1} egész számra vizsgáljuk, hogy p-nek hány osztója van a {2,...,p} egész száomok között. Ha az osztók száma 1, akkor p prím.",
+        "Minden p∈{2,...,N-1} egész számra vizsgáljuk a d∈{2,...,p-1} egész számokkal való oszthatóságot. Ha találunk olyan d számot, amivel p osztható, akkor p nem prím.",
+        "Készítsünk egy függvényt, ami a kapott p paraméterre sorban megvizsgálja a 2, 3, ...,L√p⅃ számokkal való osztás maradékát, és ha az nulla, azonnal visszatér hamis értékkel. Ha nem volt ilyen, akkor igaz értékkel tér vissza. Ezt hívjuk meg minden p∈{2,...,N-1} egész számra, és ha a visszaadott érték igaz, akkor p prím.",
+        "Kiindulva a {2,....,N-1} halmazból, keressük meg a halmaz legkisebb, még nem vizsgált elemét, és vegyük ki a többszöröseit. A műveletet mindaddig ismételjük, amíg a megtalált elem kisebb √N-nél. Ha befejeztük, a halmaz pont a keresett prímszámokat tartalmazza.",
+        "Készítsünk egy függvényt ami megadja a kapott szám prímtényezős felbontásában szereplő számokat. Ezt hívjuk meg minden p∈{2,...,N-1} számra, és ha a visszaadott halmaz egyelemű, akkor p prím."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question071",
+      "questionTitle": "Mi a bemenő módú argumentum kezelés?",
+      "answers": [
+        "Az, amikor a függvény argumentumaként átadott változó értékét felhasználjuk, de nem módosítjuk.",
+        "Az, amikor a függvényhívás eredményét közvetlenül eltároljuk egy változóban.",
+        "Fájlba írás.",
+        "A program parancssori paramétereinek kezelése.",
+        "A felhasználó által megadott adat beolvasása."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question072",
+      "questionTitle": "Milyen művelettel rendelkezik a megfelelő T₁ és T₂ típusú értékkészletű típusokból képzett T₁ᵀ² értékkeszletű T típus?",
+      "answers": [
+        "Változat(→ A: T, → R: int)",
+        "Kiolvas(→ A: T, → I: T₂, ← R: T₁)",
+        "Módosít(→ A: T, R: int)",
+        "Kiolvas₁(→ A: T, ← R: T₁)",
+        "Módosít₂(→ A: T, → R: T₂)"
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question073",
+      "questionTitle": "Melyik válasz tartalmaz csupa egyenértékű kifejezést char *p; deklaráció esetén?",
+      "answers": [
+        "&p[3], *p+3",
+        "p[3], &p+3",
+        "p[3], p+3",
+        "p[3], *(p+3*sizeof(char))",
+        "p[3], *p+3"
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question074",
+      "questionTitle": "Hogyan tárolódik a signed char típusú 128 érték?",
+      "answers": [
+        "Ez az érték nem tárolható a megadott típuson.",
+        "1000 0000",
+        "0000 0000",
+        "1111 1111",
+        "0111 1111"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question075",
+      "questionTitle": "Mi lesz C nyelven az a += (b -= c = 9) + d; utasítás egyik következménye?",
+      "answers": [
+        "c új értéke 9 lesz.",
+        "a értéke b-vel nő (b eredeti értékével számolva).",
+        "Fordítási hiba.",
+        "d értéke 9-cel nő.",
+        "b értéke c-vel csökken (c eredeti értékével számolva)."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question076",
+      "questionTitle": "Mik a diszkrét ismétléses vezérlés elemei és a vezérlés lényege?",
+      "answers": [
+        "Egy I sorrendi típusú i változó adott sorrendben felveszi az [a,b] (⊆I) intervallum értékeit és minden aktuális i=x, (x∈[a,b]) értékre végrehajtja ugyanazt az M műveletet.",
+        "Egy I típusú i változó tetszőleges sorrendben felveszi az [a,b] (⊆I) intervallum értékeit és minden aktuális i=x, (x∈[a,b]) értékre végrehajtja ugyanazt az M műveletet.",
+        "Egy I sorrendi típusú i változó adott sorrendben felveszi az [a,b] (⊆I) intervallum értékeit és minden aktuális i=xⱼ, (xⱼ∈[a,b]) értékre végrehajtja a hozzá tartozó Mⱼ műveletet.",
+        "Egy I típusú i változó tetszőleges sorrendben felveszi egy H (⊆I) halmaz értékeit és minden aktuális i=hⱼ, hⱼ∈H értékre végrehajtja a hozzá tartozó Mⱼ műveletet.",
+        "Egy I típusú i változó tetszőleges sorrendben felveszi egy H (⊆I) halmaz értékeit és minden aktuális i=h, (h∈H) értékre végrehajtja ugyanazt az M műveletet."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question077",
+      "questionTitle": "Van-e jelentősége, hogy a .c programunkban milyen sorrendben #include-oljuk a header fájlokat?",
+      "answers": [
+        "Először mindenképpen a saját, utána a rendszer header fájlokat kell #include-olni.",
+        "Semmilyen, teljes mértékben tetszőleges.",
+        "Először mindenképpen a rendszer, utána a saját header fájlokat kell #include-olni.",
+        "Mindenképpen a header fájlok közötti teljes függőségi fa szerinti sorrendben kell őket felsorolni.",
+        "Ha minden header fájl önmagában konzisztens, azaz a saját függőségeit #include-olja, akkor nincs."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question078",
+      "questionTitle": "Mekkora helyet foglal egy N elemű E alaptípusú tömbre mutató pointer változó 64 bites rendszerekben?",
+      "answers": [
+        "8 bájtot.",
+        "N-szer annyit, amennyit egyetlen E típusú érték tárolásához foglalna.",
+        "N-szer annyit, amennyit egyetlen E típusú érték tárolásához foglalna, de elemenként legalább 8 bájtot.",
+        "N bájtot.",
+        "Annyiszor 8 bájtot, ahány mezője van (8*N)."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question079",
+      "questionTitle": "Mire jó a break utasítás?",
+      "answers": [
+        "A switch-ben jelzi, hogy a következő switch-beli utasítást már nem kell végrehajtani.",
+        "A break utasítás hatására a program az őt követő continue utasításnál folytatódik.",
+        "A ciklusokban a ciklusmagnak csak az aktuális futását szakítja meg, a teljes ciklust nem.",
+        "Ugyanarra használjuk a switch-ben, mint amire a continue utasítást a ciklusokban.",
+        "Hatására a for ciklus azonnal a feltételkiértékelés végrehajtásával folytatódik."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question080",
+      "questionTitle": "A felsoroltak közül melyik adattípusra NEM igaz, hogy két határérték között a neki megfelelő matematikai adattípus összes értékének ábrázolására képes?",
+      "answers": [
+        "unsigned long long",
+        "short int",
+        "A felsoroltak egyikére sem igaz.",
+        "A felsoroltak mindegyikére igaz.",
+        "char"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question081",
+      "questionTitle": "A ± művelet prioritása magasabb, mint az × műveleté. Ekkor az K×L±M×N kifejezés melyik kifejezéssel lesz egyenértékű?",
+      "answers": [
+        "K×(L±(M×N))",
+        "(K×L)±M×N",
+        "K×(L±M)×N",
+        "K×L±(M×N)",
+        "((K×L)±M)×N"
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question082",
+      "questionTitle": "Melyik kulcsszóval kell deklarálnunk egy változót, ha értéke a programunktól függetlenül megváltozhat?",
+      "answers": ["auto", "extern", "const", "volatile", "register", "static"],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question083",
+      "questionTitle": "Lehet-e ; használata nélkül fordítható, működő programot írni, ami kiírja a parancssorban kapott két szám mértani közepét? Hogyan, vagy miért nem?",
+      "answers": [
+        "Igen, egész egyszerűen a ;-k helyett ,-ket kell használnunk, hiszen az is szekvenciális kiértékelést ír elő.",
+        "Nem, fordíthatót lehet, de ; hiányában semmilyen utasítást nem fog végrehajtani.",
+        "Nem, mert változókra mindenképpen szükségünk van, és azok deklarációját mindenképpen ;-vel kell zárni.",
+        "Nem, mert legalább egy kiírató utasítás szükséges, azt pedig le kell zárni egy ;-vel.",
+        "Igen, megírható úgy a program, hogy a main paraméterein kívül nem használunk változót, és a kiíratást egy while feltételébe tesszük bele."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question084",
+      "questionTitle": "Milyen jellegű utasítást kellett a programban korábban végrehajtani ahhoz, hogy a free (x) utasítás ne okozzon futási hibát?",
+      "answers": [
+        "y = malloc(12); után x *= y;",
+        "y = malloc(12); után x = y;",
+        "y = malloc(12); után x &= y;",
+        "y = malloc(12); után x = *y;",
+        "y = malloc(12); után x = &y;"
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question085",
+      "questionTitle": "A programozás melyik fázisa az, amelyben a felhasználó a saját szakterületének nyelvezetét használva ismerteti a problémát?",
+      "answers": [
+        "Algoritmus.",
+        "Megvalósítás",
+        "Követelmény-specifikáció",
+        "Ellenőrzés",
+        "Fenntartás"
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question086",
+      "questionTitle": "Egy programban hol kell elhelyezni az #include-okat?",
+      "answers": [
+        "Kizárólag komment sorok lehetnek előttük, semmi más.",
+        "Mindenképpen a #define-ok előtt kell szerepelniük.",
+        "Bárhol lehetnek a forrásban, de az összes #include-nak egyben, egymás utáni sorokban kell szerepelnie.",
+        "Nincs megkötés, teljes mértékben tetszőleges.",
+        "Csak a preprocesszornak szóló utasítások előzhetik meg, érdemi C kód nem."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question087",
+      "questionTitle": "Melyik állítás NEM igaz a következő calc.c programmal kapcsolatban?",
+      "answers": [
+        "Mind igaz.",
+        "A gcc -c calc.c parancs linker hibával áll le, és nem készíti el a futtatható programot.",
+        "Az extern kulcsszó elhagyása érdemi változást jelent a program tekintetében.",
+        "A program feladata számrendszerek közötti átváltás.",
+        "A num változónak nem foglalódik hely a memóriában."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": "image013"
+    },
+    {
+      "questionID": "question088",
+      "questionTitle": "Az alábbiak közül melyik történik az algoritmustervezés nevű programozási fázisban?",
+      "answers": [
+        "A fejlesztő meghatározza, hogy a bemenő adatokból milyen műveletek végrehajtásával kaphatjuk meg a kimenő adatokat.",
+        "A fejlesztő meghatározza a probléma be- és kimenő adatait, a közöttük lévő összefüggéseket.",
+        "A fejlesztő kijavítja az éles használat közben felmerült hibákat.",
+        "A fejlesztő egy adott programozási nyelven leírja, hogy milyen műveleteket milyen sorrendben kell végrehajtani.",
+        "A fejlesztő megbizonyosodik arról, hogy a program az elvárásoknak megfelelően működik."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question089",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "if(n) { X; } else if(i) { Y; } else { W; }",
+        "if(i) { X; } else if(n) { Y; } else { W; }",
+        "if(W == i) { X; }; if(W == n) { Y; }",
+        "switch(W) { case i: X; case n: Y; }",
+        "switch(W) { case i: X; break; case n: Y; break; }"
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": "image014"
+    },
+    {
+      "questionID": "question090",
+      "questionTitle": "Egy adott programozási nyelv adattípusai és adatkezelési műveletei leginkább melyik adatkezelési szinthez tartoznak?",
+      "answers": [
+        "Fizikai adattípus szint.",
+        "Absztrakt adattípus szint.",
+        "Probléma szintje.",
+        "Virtuális adattípus szint.",
+        "Szaktudományos és matematikai szint."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question091",
+      "questionTitle": "Melyik kulcsszóval kell deklarálnunk egy változót, ha használni szeretnénk, de tudjuk, hogy más fog gondoskodni a memóriafoglalásáról?",
+      "answers": ["const", "static", "extern", "register", "volatile"],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question092",
+      "questionTitle": "Mire jó a continue utasítás?",
+      "answers": [
+        "Ugyanarra használjuk a ciklusokban, mint amire a break utasítást a switch-ben.",
+        "Segítségével jelezhetjük, hogy a függvény végrehajtása befejeződött, folytatható a program.",
+        "A switch-ben jelzi, hogy a vezérlés folytatódjon a következő case ágon is, de nem szokás kiírni.",
+        "Hatására a for ciklus azonnal az inkremetáló kifejezés végrehajtásával folytatódik.",
+        "A break utasítás hatására a program az őt követő continue utasításnál folytatódik."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question093",
+      "questionTitle": "Mi lesz C nyelven az a += b -= c = 9 + d; utasítás egyik következménye?",
+      "answers": [
+        "Fordítási hiba.",
+        "b értéke d + 9-cel csökken (d eredeti értékével számolva).",
+        "a értéke b-vel nő (b eredeti értékével számolva).",
+        "c új értéke 9 lesz.",
+        "d értéke 9-cel nő."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question094",
+      "questionTitle": "Hogyan lehet megoldani, hogy egy fordítási időben ismert, futás közben nem változó tömb elemeinek végigjárásához ne kelljen a tömb méretét a forráskódban megadni?",
+      "answers": [
+        "A tömb végére egy speciális jelet beillesztve a tömböt nem az elemszám alapján, hanem a végjelig lehet bejárni.",
+        "Sehogyan, a méret megadása nélkül deklarálni sem tudjuk a tömböt.",
+        "Sehogyan, a tömb méretét mindenképpen tudni kell ahhoz, hogy végig tudjuk járni az elemeit.",
+        "A méretet futás közben a felhasználótól kell bekérni.",
+        "Ha a fordítóra bízzuk a méret meghatározását, akkor a for ciklus automatikusan képes bejárni a tömb elemeit."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question095",
+      "questionTitle": "A program méretre optimalizálását a fordítási folyamat melyik lépése végzi?",
+      "answers": [
+        "Az assembler.",
+        "A compiler.",
+        "Az archiver.",
+        "A linker.",
+        "A preprocesszor."
+      ],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question096",
+      "questionTitle": "Egy programban hol használhatunk #define direktívát?",
+      "answers": [
+        "Az #include-okkal vegyesen, de mindenképpen egy helyen kell szerepelniük.",
+        "Mindenképpen az #include-ok mögött kell szerepelniük.",
+        "Csak függvényeken kívül.",
+        "Csak a preprocesszornak szóló utasítások előzhetik meg, érdemi C kód nem.",
+        "Tetszőleges helyen."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question097",
+      "questionTitle": "Mi kapcsolható az adatkezelés absztrakt adattípus szintjéhez?",
+      "answers": [
+        "Az adattípus értékkészletének pontosítása, és az értékek közötti összefüggések meghatározása.",
+        "A programban szereplő adatok informális meghatározása.",
+        "Amikor a típus értékeit hozzárendeljük a memóriaterületen tárolható különféle bitsorozatokhoz.",
+        "Az adattípus műveleteinek meghatározása.",
+        "Egy adott programozási nyelv adattípusai és adatkezelési műveletei."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question098",
+      "questionTitle": "Melyik válasz tartalmazza helyes sorrendben a függvény végrehajtásának lépéseit?",
+      "answers": [
+        "Paramétermásolás, memóriafelszabadítás, végrehajtás, helyfoglalás, visszatérési érték másolása",
+        "Paramétermásolás, végrehajtás, helyfoglalás, visszatérési érték másolása, memóriafelszabadítás",
+        "Helyfoglalás, paramétermásolás, végrehajtás, visszatérési érték másolása, memóriafelszabadítás",
+        "Paramétermásolás, helyfoglalás, memóriafelszabadítás, végrehajtás, visszatérési érték másolása.",
+        "Helyfoglalás, végrehajtás, paramétermásolás, memóriafelszabadítás, visszatérési érték másolása."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question099",
+      "questionTitle": "Melyik karaktersorozat NEM felel meg az ábrán látható szintaxisnak?",
+      "answers": ["_5", "FOO", "_", "KW0_Q3", "A38"],
+      "correctAnswerIndex": 3,
+      "imageID": "image015"
+    },
+    {
+      "questionID": "question100",
+      "questionTitle": "Mi az értékkészlete a typedef T X[5];-ként definiált típusnak?",
+      "answers": [
+        "{1, 2, 3, 4, 5}×T",
+        "{0, 1, 2, 3, 4}×T",
+        "T",
+        "T×X⁵",
+        "T×T×T×T×T"
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question101",
+      "questionTitle": "Minek a definíciója a következő: Egy algoritmusnak egy adott, jól formalizált, a számítógép által értelmezhető nyelven történő leírása.",
+      "answers": [
+        "Szerkezeti ábra.",
+        "Adattípus.",
+        "Szintaxis.",
+        "Program.",
+        "Algoritmus."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question102",
+      "questionTitle": "Melyik C kódrészlet valósítja meg a szerkezeti ábrán látható algoritmust?",
+      "answers": [
+        "{ X; Y; }",
+        "while(X) { Y; }",
+        "do Y; while(X);",
+        "switch(X) { default: Y; }",
+        "for(X) { Y; }",
+        "if(X) { Y; }"
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": "image016"
+    },
+    {
+      "questionID": "question103",
+      "questionTitle": "Pascal háromszöget szeretne kirajzoltatni. Hogyan célszerű meghatározni a binomiális együtthatók (n alatt k) értékeit?",
+      "answers": [
+        "Mivel a Pascal háromszög előző sorában úgyis megjelenítjük a számításhoz szükséges együtthatókat, egy rekurzív függvénnyel célszerű kiszámoltatni az értékeket.",
+        "Külön ki kell számolni n!, k! és (n-k)! értékeit, majd a képlet szerint elvégezni a szorzás és osztás műveleteket.",
+        "Az n*..*(n-k+1) szorzatot el kell osztani k! értékével.",
+        "A kezdeti 1 értéket felváltva kell szorozni és osztani az n, .., n-k+1 illetve 1, .., k sorozatok elemeivel.",
+        "Egy struktúrában célszerű gyűjteni a már kiszámolt értékeket, és a rekurzív képlet segítségével, de a már kiszámolt értékeket a struktúrából véve célszerű a számítást elvégezni."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question104",
+      "questionTitle": "Mi jellemző a const kulcsszóval készített konstansokra?",
+      "answers": [
+        "Úgy viselkednek, mintha az értéküket literálként adnánk meg a hivatkozási helyeken.",
+        "A const kulcsszóval nem lehet konstansokat készíteni.",
+        "Csak c fájlban szerepelhetnek, headerben nem.",
+        "Egyszerű változóként használhatóak.",
+        "Változóként tárolódnak a memóriában, de a fordító nem engedi meg, hogy értékadás bal oldalán szerepeljenek."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
+    },
+    {
+      "questionID": "question105",
+      "questionTitle": "C-ben melyik NEM előnye egy kétdimenziós dinamikus tömb egydimenziós tömbbel való megvalósításának a soronként foglalt valóban kétdimenziós megvalósítással szemben?",
+      "answers": [
+        "Egyszerűbb a memóriafoglalás.",
+        "Teljes mátrix esetén kevesebb memóriát fogyaszt.",
+        "A mátrix átméretezése gyakrabban megúszható újabb memóriaműveletek nélkül.",
+        "A tömb másolása egyszerűbben valósítható meg.",
+        "Az eltérő hosszúságú sorok helytakarékos megvalósításának lehetősége."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question106",
+      "questionTitle": "A programunk adott méretű bináris adatokat ír egy fájlba. Ha az alábbi függvények közül csak az egyik, akkor legvalószínűbben melyik szerepel benne az fopen és fclose hívása között?",
+      "answers": ["fputs", "fprintf", "fflush", "fscanf", "gets"],
+      "correctAnswerIndex": 1,
+      "imageID": ""
+    },
+    {
+      "questionID": "question107",
+      "questionTitle": "A fordítási folyamat melyik lépésének bemenetei az archív fájlok (library-k)?",
+      "answers": [
+        "A linker.",
+        "Az assembler.",
+        "A compiler.",
+        "Az archiver.",
+        "A preprocesszor."
+      ],
+      "correctAnswerIndex": 0,
+      "imageID": ""
+    },
+    {
+      "questionID": "question108",
+      "questionTitle": "Az alábbiak közül melyik történik a megvalósítás nevű programozási fázisban?",
+      "answers": [
+        "A fejlesztő kijavítja az éles használat közben felmerült hibákat.",
+        "A fejlesztő meghatározza a probléma be- és kimenő adatait, a közöttük lévő összefüggéseket.",
+        "A fejlesztő megbizonyosodik arról, hogy a program az elvárásoknak megfelelően működik.",
+        "A fejlesztő egy adott programozási nyelven leírja, hogy milyen műveleteket milyen sorrendben kell végrehajtani.",
+        "A fejlesztő meghatározza, hogy a bemenő adatokból milyen műveletek végrehajtásával kaphatjuk meg a kimenő adatokat."
+      ],
+      "correctAnswerIndex": 3,
+      "imageID": ""
+    },
+    {
+      "questionID": "question109",
+      "questionTitle": "Mire jó a break utasítás?",
+      "answers": [
+        "Ugyanarra használjuk a switch-ben, mint amire a continue utasítást a ciklusokban.",
+        "A ciklusokban a ciklusmagnak csak az aktuális futását szakítja meg, a teljes ciklust nem.",
+        "Hatására a while ciklus azonnal befejeződik.",
+        "Hatására a for ciklus azonnal az inkremetáló kifejezés végrehajtásával folytatódik.",
+        "A break utasítás hatására a program az őt követő continue utasításnál folytatódik."
+      ],
+      "correctAnswerIndex": 2,
+      "imageID": ""
+    },
+    {
+      "questionID": "question110",
+      "questionTitle": "Mi az auto kulcsszó jelentése?",
+      "answers": [
+        "Az így deklarált változó értéke a külső tényezők miatt is megváltozhat.",
+        "Az így deklarált változót nem a memóriában kell tárolni.",
+        "Az így deklarált változó nem használható értékadó utasításban I-value-ként.",
+        "Az így deklarált változónak a program indulásakor foglalódik memória, és az a program végén szabadul fel.",
+        "Az így deklarált változó csak az őt deklaráló blokk végrehajtása idején létezik.",
+        "Az így deklarált változó memóriafoglalásáról a fordítónak most nem kell gondoskodnia."
+      ],
+      "correctAnswerIndex": 4,
+      "imageID": ""
     }
   ]
 }

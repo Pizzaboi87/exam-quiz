@@ -2,14 +2,28 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Paper } from "@mui/material";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../context/user-context";
+import { getQuestionImage } from "../utils/firebase";
+import { useSwalMessage } from "../utils/useSwalMessage";
 
-const Question = ({ question, guess, setGuess, setLives }) => {
+const Question = ({ question, guess, setGuess, setPlayerLifes }) => {
   const { correctAnswer, wrongAnswer } = useContext(UserContext);
+  const { showImage } = useSwalMessage();
   const { questionTitle, answers, correctAnswerIndex } = question;
-  const guessRefs = useRef([null, null, null, null, null]);
+  const [imageLink, setImageLink] = useState(null);
+  const guessRefs = useRef([null, null, null, null, null, null]);
   const passRef = useRef(null);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      const link = await getQuestionImage(`${question.imageID}.jpg`);
+      setImageLink(link);
+    };
+
+    if (question.imageID) fetchImage();
+    else setImageLink(null);
+  }, [question]);
 
   const handleGuess = (answerIndex) => {
     if (guess == null) setGuess(answerIndex);
@@ -31,15 +45,24 @@ const Question = ({ question, guess, setGuess, setLives }) => {
         wrongAnswer();
         guessRefs.current[correctAnswerIndex].style.backgroundColor = "#49DCB1";
         guessRefs.current[guess].style.backgroundColor = "#EF767A";
-        setLives((prevLives) => prevLives - 1);
+        setPlayerLifes((prevPlayerLifes) => prevPlayerLifes - 1);
     }
   }, [guess]);
 
   return (
-    <Paper className="xl:w-[50vw] w-full" variant="questionBox">
+    <Paper className="xl:w-[75vw] w-full" variant="questionBox">
       <div className="mb-4">
         <Typography variant="question">{questionTitle}</Typography>
       </div>
+
+      {imageLink && (
+        <img
+          src={imageLink}
+          alt="question_image"
+          className="mb-4 xl:max-h-[25vh] cursor-zoom-in"
+          onClick={() => showImage(imageLink)}
+        />
+      )}
 
       <div className="flex flex-col gap-4">
         {answers.map((answer, index) => (
