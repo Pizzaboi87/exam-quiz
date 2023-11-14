@@ -1,7 +1,7 @@
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { Home, Loading, SignIn, SignUp, Quiz, Eyes } from ".";
 import { AnimatePresence, motion } from "framer-motion";
 import { Typography } from "@mui/material";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { onAuthStateChangedListener, signOutUser } from "../utils/firebase";
 import { useEffect, useState } from "react";
 

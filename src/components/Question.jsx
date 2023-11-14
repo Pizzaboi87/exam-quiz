@@ -1,11 +1,14 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { CardActionArea, Paper } from "@mui/material";
-import { useContext, useEffect, useRef, useState } from "react";
 import { UserContext } from "../context/user-context";
+import { useContext, useEffect, useRef, useState } from "react";
 import { getQuestionImage } from "../utils/firebase";
 import { useSwalMessage } from "../utils/useSwalMessage";
+import {
+  CardActionArea,
+  Paper,
+  Typography,
+  CardContent,
+  Card,
+} from "@mui/material";
 
 const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
   const { correctAnswer, wrongAnswer } = useContext(UserContext);
@@ -17,7 +20,7 @@ const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
 
   useEffect(() => {
     const fetchImage = async () => {
-      const link = await getQuestionImage(`${question.imageID}.jpg`);
+      const link = await getQuestionImage(`${question.imageID}.webp`);
       setImageLink(link);
     };
 
@@ -50,7 +53,7 @@ const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
   }, [guess]);
 
   return (
-    <Paper className="xl:w-[75vw] w-full" variant="questionBox">
+    <Paper className="xl:w-[75vw] w-full " variant="questionBox">
       <div className="mb-4">
         <Typography variant="question">{questionTitle}</Typography>
       </div>
@@ -59,7 +62,7 @@ const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
         <img
           src={imageLink}
           alt="question_image"
-          className="mb-4 xl:max-h-[25vh] cursor-zoom-in"
+          className="mb-4 md:max-h-[25vh] cursor-zoom-in"
           onClick={() => showImage(imageLink)}
         />
       )}

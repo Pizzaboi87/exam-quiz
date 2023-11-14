@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
@@ -23,7 +22,11 @@ const Lifes = ({ playerLifes }) => {
       />
     ));
 
-  return <span className="mb-4">{[...filledHearts, ...emptyHearts]}</span>;
+  return (
+    <span className="mb-4 xl:mt-0 mt-16">
+      {[...filledHearts, ...emptyHearts]}
+    </span>
+  );
 };
 
 export default Lifes;

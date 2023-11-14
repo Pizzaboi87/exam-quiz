@@ -1,4 +1,6 @@
 import winner from "../assets/winner.gif";
+import { getData } from "../utils/firebase";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -8,8 +10,6 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { getData } from "../utils/firebase";
-import { useEffect, useState } from "react";
 
 const Championship = () => {
   const [firstFive, setFirstFive] = useState([]);
@@ -24,8 +24,6 @@ const Championship = () => {
           return b.result - a.result;
         })
         .slice(0, 10);
-
-      console.log(dataArr);
 
       setFirstFive(dataArr.slice(0, 5));
       setSecondFive(dataArr.slice(5, 10));

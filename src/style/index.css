@@ -16,6 +16,8 @@
 body {
   background: #05005e;
   background: linear-gradient(17deg, #05005e 0%, #090979 35%, #00b5da 100%);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .recharts-tooltip-cursor {

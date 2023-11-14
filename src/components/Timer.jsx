@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, CircularProgress } from "@mui/material";
+import { useState, useEffect } from "react";
 
 const Timer = ({ setGameOver }) => {
   const initialTime = 15 * 60;

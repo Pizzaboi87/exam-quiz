@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/user-context";
+import { useContext, useEffect, useState } from "react";
 
 const Eye = () => {
   const { isCorrect, setIsCorrect } = useContext(UserContext);

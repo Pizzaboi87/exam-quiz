@@ -2,8 +2,8 @@ import Question from "./Question";
 import Timer from "./Timer";
 import Lifes from "./Lifes";
 import { Button } from "@mui/material";
-import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/user-context";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSwalMessage } from "../utils/useSwalMessage";
 import { storeResult } from "../utils/firebase";
@@ -19,47 +19,54 @@ const Quiz = ({ isRace }) => {
   const [actualUserData, setActualUserData] = useState([]);
   const [guess, setGuess] = useState(null);
   const [questions, setQuestions] = useState([]);
+  const [randomQuestions, setRandomQuestions] = useState([]);
   const [isThereMore, setIsThereMore] = useState(true);
   const navigate = useNavigate();
 
   const fetchActualData = async () => {
-    const userDatafromDB = await getUserData(currentUser.uid);
-    setActualUserData(userDatafromDB);
-    setUserData(userDatafromDB);
+    try {
+      const userDatafromDB = await getUserData(currentUser.uid);
+      setActualUserData(userDatafromDB);
+      setUserData(userDatafromDB);
+    } catch (error) {
+      showErrorSwal("Hiba történt az adatok betöltése közben.");
+      console.error(error);
+    }
   };
 
   const fetchQuestions = async () => {
-    const response = await getData("question/");
-    setQuestions(response);
-    resetPoints();
+    try {
+      const response = await getData("question/");
+      setQuestions(response);
+      resetPoints();
+    } catch (error) {
+      showErrorSwal("Hiba történt a kérdések betöltése közben.");
+      console.error(error);
+    }
   };
 
   const nextQuestion = () => {
-    if (questionIndex === questions.length - 2) setIsThereMore(false);
+    if (questionIndex === randomQuestions.length - 2) setIsThereMore(false);
     setGuess(null);
     setQuestionIndex((prevQuestionIndex) => prevQuestionIndex + 1);
   };
 
   const uploadPoints = async () => {
-    await fetchActualData();
-    const updatedQuizDetails = {
-      points: points,
-      time: new Date().toLocaleString(),
-    };
-
     try {
-      if (actualUserData.quizes) {
-        await updateUserData(currentUser.uid, {
-          quizes: [...actualUserData.quizes, updatedQuizDetails],
-        });
-      } else {
-        await updateUserData(currentUser.uid, {
-          quizes: [updatedQuizDetails],
-        });
-      }
+      await fetchActualData();
+      const updatedQuizDetails = {
+        points: points,
+        time: new Date().toLocaleString(),
+      };
+
+      const updatedQuizes = actualUserData.quizes
+        ? [...actualUserData.quizes, updatedQuizDetails]
+        : [updatedQuizDetails];
+
+      await updateUserData(currentUser.uid, { quizes: updatedQuizes });
     } catch (error) {
       showErrorSwal("Hiba történt az adatok feltöltése közben.");
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -75,6 +82,18 @@ const Quiz = ({ isRace }) => {
     });
   };
 
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
+
   useEffect(() => {
     if (playerLifes === 0) setGameOver(true);
   }, [playerLifes]);
@@ -88,7 +107,16 @@ const Quiz = ({ isRace }) => {
     fetchActualData();
   }, []);
 
-  if (!questions.length) return null;
+  useEffect(() => {
+    if (questions.length > 0) {
+      const shuffledQuestions = isRace
+        ? shuffleArray(questions)
+        : shuffleArray(questions).slice(0, 15);
+      setRandomQuestions(shuffledQuestions);
+    }
+  }, [isRace, questions]);
+
+  if (!randomQuestions.length) return null;
 
   return (
     <div className="w-full min-h-[100vh] flex flex-col items-center justify-center">
@@ -101,7 +129,7 @@ const Quiz = ({ isRace }) => {
         <Timer setGameOver={setGameOver} />
       )}
       <Question
-        question={questions[questionIndex]}
+        question={randomQuestions[questionIndex]}
         guess={guess}
         setGuess={setGuess}
         setPlayerLifes={setPlayerLifes}

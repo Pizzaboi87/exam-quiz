@@ -1,6 +1,6 @@
+import { UserContext } from "../context/user-context";
 import { useContext, useEffect, useState } from "react";
 import { getUserData } from "../utils/firebase";
-import { UserContext } from "../context/user-context";
 import {
   BarChart,
   Bar,

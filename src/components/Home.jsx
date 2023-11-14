@@ -1,8 +1,8 @@
-import { Button, Card, Paper, Typography } from "@mui/material";
+import { UserContext } from "../context/user-context";
 import { Championship, Chart, Loading } from ".";
+import { Button, Card, Paper, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../context/user-context";
 
 const Home = () => {
   const navigate = useNavigate();
