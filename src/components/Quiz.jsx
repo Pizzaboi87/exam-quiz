@@ -120,7 +120,7 @@ const Quiz = ({ isRace }) => {
 
   return (
     <div className="w-full min-h-[100vh] flex flex-col items-center justify-center">
-      <h1 className="absolute top-4 left-4 text-[1.5rem] font-[600] text-white">
+      <h1 className="absolute top-[1.15rem] left-4 xl:text-[1.5rem] text-[1.25rem] font-[600] text-white">
         Pontszám: {points}
       </h1>
       {isRace ? (
