@@ -40,7 +40,7 @@ const MainContent = () => {
     >
       {signedIn && (
         <Typography
-          className="absolute top-5 right-4"
+          className="absolute top-5 right-4 z-50"
           variant="signOut"
           onClick={signOutUser}
         >
