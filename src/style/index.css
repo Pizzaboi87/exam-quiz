@@ -10,18 +10,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 body {
-  background: rgb(5, 0, 94);
-  background: linear-gradient(
-    17deg,
-    rgba(5, 0, 94, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 181, 218, 1) 100%
-  );
+  background: #05005e;
+  background: linear-gradient(17deg, #05005e 0%, #090979 35%, #00b5da 100%);
 }
 
 .recharts-tooltip-cursor {
-  fill: rgba(34, 167, 255, 0.2) !important;
+  fill: #22a7ff33 !important;
+}
+
+.eyes::before {
+  content: "";
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 0.15rem solid;
 }

@@ -1,5 +1,6 @@
 import Championship from "./Championship";
 import Chart from "./Chart";
+import Eyes from "./Eyes";
 import Home from "./Home";
 import Lifes from "./Lifes";
 import Loading from "./Loading";
@@ -13,6 +14,7 @@ import Timer from "./Timer";
 export {
   Championship,
   Chart,
+  Eyes,
   Home,
   Lifes,
   Loading,

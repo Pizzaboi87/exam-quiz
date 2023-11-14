@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import { Home, Loading, SignIn, SignUp, Quiz } from ".";
+import { Home, Loading, SignIn, SignUp, Quiz, Eyes } from ".";
 import { AnimatePresence, motion } from "framer-motion";
 import { Typography } from "@mui/material";
 import { onAuthStateChangedListener, signOutUser } from "../utils/firebase";
@@ -57,6 +57,9 @@ const MainContent = () => {
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </AnimatePresence>
+      {location.pathname != "/signup" && location.pathname != "/signin" && (
+        <Eyes />
+      )}
     </motion.div>
   );
 };

@@ -11,6 +11,7 @@ export const UserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [userData, setUserData] = useState(null);
   const [tempName, setTempName] = useState("");
+  const [isCorrect, setIsCorrect] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (user) => {
@@ -31,10 +32,12 @@ export const UserProvider = ({ children }) => {
 
   const correctAnswer = () => {
     setPoints((prevPoints) => prevPoints + 1);
+    setIsCorrect(true);
   };
 
   const wrongAnswer = () => {
     setPoints((prevPoints) => prevPoints - 0.5);
+    setIsCorrect(false);
   };
 
   const resetPoints = () => {
@@ -53,6 +56,8 @@ export const UserProvider = ({ children }) => {
         tempName,
         setTempName,
         setUserData,
+        isCorrect,
+        setIsCorrect,
       }}
     >
       {children}

@@ -7,7 +7,7 @@ import { UserContext } from "../context/user-context";
 import { getQuestionImage } from "../utils/firebase";
 import { useSwalMessage } from "../utils/useSwalMessage";
 
-const Question = ({ question, guess, setGuess, setPlayerLifes }) => {
+const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
   const { correctAnswer, wrongAnswer } = useContext(UserContext);
   const { showImage } = useSwalMessage();
   const { questionTitle, answers, correctAnswerIndex } = question;
@@ -42,7 +42,7 @@ const Question = ({ question, guess, setGuess, setPlayerLifes }) => {
         guessRefs.current[correctAnswerIndex].style.backgroundColor = "#49DCB1";
         break;
       default:
-        wrongAnswer();
+        !isRace && wrongAnswer();
         guessRefs.current[correctAnswerIndex].style.backgroundColor = "#49DCB1";
         guessRefs.current[guess].style.backgroundColor = "#EF767A";
         setPlayerLifes((prevPlayerLifes) => prevPlayerLifes - 1);

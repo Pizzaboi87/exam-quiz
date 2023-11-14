@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <Paper
-      className="xl:w-[80%] w-[95%] xl:h-[80vh] h-auto xl:mt-0 xl:mb-0 mt-16 mb-6 pt-4 flex flex-col"
+      className="xl:w-[80%] w-[95%] xl:h-[80vh] h-auto xl:mt-0 xl:mb-0 mt-16 mb-12 pt-4 flex flex-col"
       style={{ overflowY: "auto" }}
     >
       <Typography variant="title" className="xl:text-[2rem] text-[1.2rem]">

@@ -105,6 +105,7 @@ const Quiz = ({ isRace }) => {
         guess={guess}
         setGuess={setGuess}
         setPlayerLifes={setPlayerLifes}
+        isRace={isRace}
       />
       <span className="flex gap-4">
         <Button variant="quiz" onClick={() => navigate("/")}>
