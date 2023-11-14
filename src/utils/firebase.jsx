@@ -109,11 +109,11 @@ export const updateUserData = async (uid, data) => {
 };
 
 export const storeResult = async (currentUser, result) => {
-  const data = await getData(`championship/${currentUser.uid}`);
+  const data = await getData(`championship/${currentUser.displayName}`);
   if (data) {
     if (data.result < result) {
       try {
-        await set(ref(database, `championship/${currentUser.uid}`), {
+        await set(ref(database, `championship/${currentUser.displayName}`), {
           name: currentUser.displayName,
           result: result,
         });
