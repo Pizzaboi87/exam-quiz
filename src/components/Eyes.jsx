@@ -27,7 +27,7 @@ const Eye = () => {
       className={`${
         flash && isCorrect
           ? "before:border-[#3E8F55]"
-          : flash && !isCorrect
+          : flash && isCorrect == false
           ? "before:border-[#CC3F0C]"
           : "before:border-[#2B35F2]"
       } eyes relative w-[1.8rem] h-[1.8rem] rounded-full bg-[#FEFEFE]`}
