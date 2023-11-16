@@ -17,7 +17,6 @@ const Eye = ({ eyeIndex }) => {
         setIsCorrect(null);
         setTimeoutCount(0);
       }
-      console.log("Flash: ", flash, "TimeoutCount: ", timeoutCount);
 
       return () => clearTimeout(timeout);
     }
