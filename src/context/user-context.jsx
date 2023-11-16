@@ -35,9 +35,12 @@ export const UserProvider = ({ children }) => {
     setIsCorrect(true);
   };
 
-  const wrongAnswer = () => {
-    setPoints((prevPoints) => prevPoints - 0.5);
-    setIsCorrect(false);
+  const wrongAnswer = (isRace) => {
+    if (isRace) setIsCorrect(false);
+    else {
+      setPoints((prevPoints) => prevPoints - 0.5);
+      setIsCorrect(false);
+    }
   };
 
   const resetPoints = () => {

@@ -45,7 +45,7 @@ const Question = ({ question, guess, setGuess, setPlayerLifes, isRace }) => {
         guessRefs.current[correctAnswerIndex].style.backgroundColor = "#49DCB1";
         break;
       default:
-        !isRace && wrongAnswer();
+        wrongAnswer(isRace);
         guessRefs.current[correctAnswerIndex].style.backgroundColor = "#49DCB1";
         guessRefs.current[guess].style.backgroundColor = "#EF767A";
         isRace && setPlayerLifes((prevPlayerLifes) => prevPlayerLifes - 1);
